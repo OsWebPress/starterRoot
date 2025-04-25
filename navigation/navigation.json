@@ -1,0 +1,21 @@
+[
+	{
+	  "text": "home",
+	  "url": "/",
+	  "image": "/images/home.ico"
+	},
+	{
+		"text": "getStarted",
+		"url": "/getstarted"
+	},
+	{
+	  "text": "about",
+	  "url": "/about",
+	  "submenu": [
+		{
+		  "text": "navigation",
+		  "url": "/navigation"
+		}
+	  ]
+	}
+]

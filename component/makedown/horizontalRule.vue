@@ -1,0 +1,3 @@
+<template>
+  <hr class="border-t-2 border-gray-300 my-4" />
+</template>

@@ -5,16 +5,28 @@
 	  "image": "/images/home.ico"
 	},
 	{
-		"text": "getStarted",
-		"url": "/getstarted"
+		"text": "todo:",
+		"url": "/todo"
 	},
 	{
-	  "text": "about",
-	  "url": "/about",
+	  "text": "test",
+	  "url": "/test"
+	},
+	{
+		"text": "editor",
+		"url": "/admin/editor"
+	},
+	{
+		"text": "about",
+		"url": "/about"
+	},
+	{
+	  "text": "misc",
+	  "url": "/misc",
 	  "submenu": [
 		{
-		  "text": "navigation",
-		  "url": "/navigation"
+		  "text": "item",
+		  "url": "/item"
 		}
 	  ]
 	}

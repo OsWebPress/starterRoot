@@ -4,8 +4,13 @@
   </li>
 </template>
 
-<script>
-
-
-
+<script setup>
+const props = defineProps({
+  number: {
+    type: Number,
+    required: false,
+    default: 1
+  }
+})
+console.log("OrderedListItem number:", props.number);
 </script>

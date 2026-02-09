@@ -1,9 +1,9 @@
 <template>
-  <img
+<div><img
     :src="url"
     :alt="alt"
     class="max-w-full h-auto max-h-[50vh] rounded-lg"
-  />
+/></div>
 </template>
 
 <script setup>

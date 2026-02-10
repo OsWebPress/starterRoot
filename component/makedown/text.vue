@@ -1,5 +1,5 @@
 <template>
-  <div class="text-black" v-html="processedText"></div>
+  <pre class="text-black" v-html="processedText"></pre>
 </template>
 
 <script setup>

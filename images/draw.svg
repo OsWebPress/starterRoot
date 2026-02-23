@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+
+<!-- Rectangles - background -->
+<rect x="0" y="0" width="200" height="200" fill="darkorange" />
+<rect x="50" y="50" width="50" height="50" fill="skyblue" />
+<rect x="100" y="100" width="50" height="100" fill="skyblue" />
+<rect x="0" y="150" width="50" height="50" fill="skyblue" />
+<rect x="150" y="0" width="50" height="50" fill="skyblue" />
+
+<!-- Circles -->
+<circle cx="75" cy="25" r="25" fill="tomato" />
+<circle cx="25" cy="25" r="25" fill="gold" />
+
+<!-- Tunnel -->
+<path d="M 0 75 A 25 25 0 0 1 50 75" fill="tomato" />
+<rect x="0" y="75" width="50" height="25" fill="tomato" />
+
+<path d="M 0 125 A 25 25 0 0 0 50 125" fill="gold" />
+<rect x="0" y="100" width="50" height="25" fill="gold" />
+
+<!-- Quarter Circle -->
+<path d="M 50 100 A 50 50 0 0 1 100 150" fill="tomato" />
+<path d="M 50 100 L 50 150 L 100 150 Z" fill="tomato" />
+
+<path d="M 50 150 A 50 50 0 0 0 100 200" fill="tomato" />
+<path d="M 50 150 L 100 150 L 100 200 Z" fill="tomato" />
+
+<!-- Zandloper -->
+<path d="M 150 100 A 25 25 0 0 1 200 100" fill="tomato" />
+<path d="M 150 50 A 25 25 0 0 0 200 50" fill="gold" />
+
+<!-- half circle -->
+<path d="M 100 100 A 25 25 0 0 1 100 50" fill="darkblue" />
+
+<!-- quarter tiny -->
+<path d="M 50 75 A 25 25 0 0 1 75 100" fill="darkblue" />
+<path d="M 50 75 L 50 100 L 75 100 Z" fill="darkblue" />
+
+<path d="M 50 75 A 25 25 0 0 0 75 50" fill="darkblue" />
+<path d="M 50 75 L 50 50 L 75 50 Z" fill="darkblue" />
+
+<!-- Quarters gold -->
+<path d="M 100 0 A 50 50 0 0 1 150 50" fill="gold" />
+<path d="M 100 0 L 100 50 L 150 50 Z" fill="gold" />
+
+<path d="M 100 50 A 50 50 0 0 0 150 100" fill="gold" />
+<path d="M 100 50 L 150 50 L 150 100 Z" fill="gold" />
+
+
+<!-- right bottom quadrant -->
+<path d="M 125 150 A 25 25 0 0 1 150 175" fill="darkblue" />
+<path d="M 125 150 L 125 175 L 150 175 Z" fill="darkblue" />
+
+<path d="M 125 150 A 25 25 0 0 0 150 125" fill="darkblue" />
+<path d="M 125 150 L 125 125 L 150 125 Z" fill="darkblue" />
+
+<path d="M 150 125 A 25 25 0 0 0 175 150" fill="darkblue" />
+<path d="M 150 125 L 175 125 L 175 150 Z" fill="darkblue" />
+
+<path d="M 175 150 A 25 25 0 0 0 150 175" fill="darkblue" />
+<path d="M 175 150 L 175 175 L 150 175 Z" fill="darkblue" />
+
+
+<path d="M 150 25 A 25 25 0 0 0 200 25" fill="darkblue" />
+<path d="M 150 0 A 25 25 0 0 0 200 0" fill="darkblue" />
+
+<path d="M 0 150 A 25 25 0 0 0 50 150" fill="darkblue" />
+<path d="M 0 175 A 25 25 0 0 0 50 175" fill="darkblue" />
+
+</svg>

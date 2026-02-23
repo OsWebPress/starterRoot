@@ -1,23 +1,3 @@
-<!-- <template>
-  <div class="w-screen -ml-24 bg-orange-100 box-border">
-    {{ props.body }}, x: "{{ props.x }}", y: "{{ props.y }}"
-
-  </div>
-</template>
-<script setup lang="ts">
-const props = defineProps({
-  body: {
-	type: String
-	},
-	x: {
-	type: Number
-	},
-	y: {
-	type: Number
-	}
-});
-</script> -->
-
 <template>
   <div class="w-screen -ml-24 bg-orange-100 box-border p-4">
     <div
@@ -47,13 +27,13 @@ const props = defineProps({
     type: String,
     required: true
   },
-  x: {
+  width: {
     type: Number,
     default: 2
   },
-  y: {
-    type: Number,
-    default: 2
+  height: {
+	type: Number,
+	default: 1
   }
 });
 
@@ -76,8 +56,8 @@ const images = computed(() => {
 // Generate dynamic grid style based on x and y props
 const gridStyle = computed(() => {
   return {
-    gridTemplateColumns: `repeat(${props.x}, 1fr)`,
-    gridTemplateRows: `repeat(${props.y}, 1fr)`,
+    gridTemplateColumns: `repeat(${props.width}, 1fr)`,
+    gridTemplateRows: `repeat(${props.height}, 1fr)`,
     minHeight: '400px' // Adjust as needed
   };
 });

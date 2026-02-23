@@ -2,8 +2,7 @@
 <div><img
     :src="url"
     :alt="alt"
-    class="max-w-full h-auto max-h-[50vh] rounded-lg"
-	loading="lazy"
+    class="w-full h-full object-cover fixed top-0 left-0 -z-10"
 /></div>
 </template>
 

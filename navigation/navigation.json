@@ -29,5 +29,9 @@
 		  "url": "/item"
 		}
 	  ]
-	}
+	},
+    {
+      "text": "Photo",
+      "url": "/photography"
+    }
 ]

@@ -8,3 +8,5 @@ This can become more complicated and is implemented with a vue component.
 The component must take the json structure as argument and display its content.
 
 The navigation component to use cannot be picked in the admin panel yet. instead you can change it by changing the code in navigation/default.vue for now.
+
+![Leuven](/api/images/church%20leuven.jpg)

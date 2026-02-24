@@ -1,13 +1,13 @@
 <template>
-  <div class="w-screen -ml-24 bg-orange-100 box-border p-4">
+  <div class="w-screen -ml-3rem md:-ml-6rem xl:-ml-12rem 2xl:-ml-18rem bg-orange-100 box-border p-2">
     <div
-      class="grid gap-4 w-full h-full"
+      class="grid gap-2 w-full h-full"
       :style="gridStyle"
     >
       <div
         v-for="(image, index) in images"
         :key="index"
-        class="relative overflow-hidden rounded-lg shadow-lg bg-white"
+        class="relative overflow-hidden rounded-lg shadow-lg bg-white max-h-[60vh]"
       >
         <img
           :src="image.src"

@@ -2,36 +2,30 @@
 	{
 	  "text": "home",
 	  "url": "/",
-	  "image": "/images/home.ico"
+	  "image": "/api/images/farra-logo.png"
 	},
 	{
-		"text": "todo:",
-		"url": "/todo"
+		"text": "Our Story",
+		"url": "/our-story"
 	},
 	{
-	  "text": "test",
-	  "url": "/test"
+	  "text": "SV Farra",
+	  "url": "/farra"
 	},
 	{
-		"text": "editor",
-		"url": "/admin/editor"
+		"text": "Blog",
+		"url": "/blog"
 	},
 	{
-		"text": "about",
-		"url": "/about"
+		"text": "Crew",
+		"url": "/crew"
 	},
 	{
-	  "text": "misc",
-	  "url": "/misc",
-	  "submenu": [
-		{
-		  "text": "item",
-		  "url": "/item"
-		}
-	  ]
+	  "text": "Find us!",
+	  "url": "/socials"
 	},
     {
-      "text": "Photo",
+      "text": "Photography",
       "url": "/photography"
     }
 ]

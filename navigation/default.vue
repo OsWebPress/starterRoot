@@ -25,10 +25,10 @@ const navigation = ref(props.navigationData);
           :to="item.url"
           :class="[
             'no-underline flex items-center',
-            item.url === props.path && !item.image ? 'text-red-500 underline' : 'text-[#333]'
+            item.url === props.path && !item.image ? 'text-cyan-300 underline' : 'text-[#333]'
           ]"
         >
-          <img v-if="item.image" :src="item.image" :alt="item.text" :class="['h-6 mr-2 rounded-md', item.url === props.path ? 'border-2 border-red-500' : '']" />
+          <img v-if="item.image" :src="item.image" :alt="item.text" :class="['h-18 mr-2', item.url === props.path ? 'border-b-2 border-cyan-300' : 'mb-2']" />
           <span v-else>{{ item.text }}</span>
           <span v-if="item.submenu" class="ml-[5px]">▼</span>
         </router-link>
@@ -36,10 +36,10 @@ const navigation = ref(props.navigationData);
           v-else
           :class="[
             'flex items-center',
-            item.url === props.path && !item.image ? 'text-red-500 underline' : 'text-[#333]'
+            item.url === props.path && !item.image ? 'text-cyan-300 underline' : 'text-[#333]'
           ]"
         >
-          <img v-if="item.image" :src="item.image" :alt="item.text" :class="['h-6 mr-2 rounded-md', item.url === props.path ? 'border-2 border-red-500' : '']" />
+          <img v-if="item.image" :src="item.image" :alt="item.text" :class="['h-6 mr-2 rounded-md', item.url === props.path ? 'border-2 border-cyan-300' : '']" />
           <span v-else>{{ item.text }}</span>
           <span v-if="item.submenu" class="ml-[5px]">▼</span>
         </span>

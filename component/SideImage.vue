@@ -6,7 +6,9 @@
         <img :src="image" alt="" class="w-full h-full object-cover" />
       </div>
       <div class="w-[60%] flex items-center justify-center p-8 bg-white opacity-80">
-        <div class="text-gray-800 text-sm leading-relaxed" v-html="parsedContent"></div>
+        <div class="text-gray-800 text-sm leading-relaxed w-full min-w-0">
+          <Makedown :content="body" />
+        </div>
       </div>
     </div>
 
@@ -15,18 +17,16 @@
       <div class="max-h-[60vh] overflow-hidden">
         <img :src="image" alt="" class="w-full h-full object-cover" />
       </div>
-      <div class="p-6bg-white bg-white opacity-80">
-        <div class="text-gray-800 text-sm leading-relaxed" v-html="parsedContent"></div>
-        <Info>info</Info>
-        <MakedownInline body="**boldie**">**bold**</MakedownInline>
+      <div class="p-6 bg-white opacity-80">
+        <div class="text-gray-800 text-sm leading-relaxed">
+          <Makedown :content="body" />
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { computed } from 'vue';
-
 const props = defineProps({
   image: {
     type: String,
@@ -37,16 +37,4 @@ const props = defineProps({
     required: true
   }
 });
-
-function parseMarkdown(text) {
-  if (!text) return '';
-  return text
-    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-    .replace(/\*(.+?)\*/g, '<em>$1</em>')
-	.replace(/# (.+?)\n/g, '<h1 class="text-4xl font-bold mb-4 text-cyan-700">$1</h1>')
-	.replace(/## (.+?)\n/g, '<h2 class="text-2xl font-bold mb-2">$1</h2>')
-	.replace(/\n/g, '<br>')
-}
-
-const parsedContent = computed(() => parseMarkdown(props.body));
 </script>

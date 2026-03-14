@@ -1,5 +1,7 @@
 <template>
-  <pre class="text-blue-100"><MakedownInline :body="body" /></pre>
+  <span class="text-blue-400 whitespace-pre-wrap overflow-x-auto">
+    <LoadComponent _component="makedown/richText" :body="body" />
+  </span>
 </template>
 
 <script setup>

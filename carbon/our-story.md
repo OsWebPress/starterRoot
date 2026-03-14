@@ -7,7 +7,7 @@
 # Our story
 **How nice that you’re taking a look into our lives and visiting our website!**
 
-We are Pascal & Dianda. We’ve been together for 5.5 years now, and for the past two years our sweet dog Kaya has also been part of our little family. Pascal is 29 years old, and Dianda is 27. Together, we share one dream: exploring the world… by sailboat!
+We are `Pascal & Dianda`. We’ve been together for 5.5 years now, and for the past two years our sweet dog Kaya has also been part of our little family. Pascal is 29 years old, and Dianda is 27. Together, we share one dream: exploring the world… by sailboat!
 But how did it all begin?
 
 **Pascal ~ from Switzerland to Curaçao**

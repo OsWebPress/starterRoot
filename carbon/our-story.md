@@ -1,7 +1,5 @@
 # Our story
 
-
-
 <SideImage image="/api/images/pascal-dianda-rotsen.jpg">
 
 # Our story

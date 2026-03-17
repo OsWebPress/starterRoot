@@ -1,5 +1,5 @@
 <template>
-  <div class="w-screen -ml-3rem md:-ml-6rem xl:-ml-12rem 2xl:-ml-18rem">
+  <LoadComponent _component="FullBleed">
     <!-- Large screens: side by side -->
     <div class="hidden lg:flex">
       <div class="w-[40%]">
@@ -23,7 +23,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </LoadComponent>
 </template>
 
 <script setup>

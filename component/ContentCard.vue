@@ -1,5 +1,5 @@
 <template>
-<div class="w-screen -ml-3rem md:-ml-6rem xl:-ml-12rem 2xl:-ml-18rem">
+<LoadComponent _component="FullBleed">
   <div class="flex items-start bg-stone-50 border border-stone-200 overflow-hidden shadow-sm min-h-[220px]">
 
     <!-- Left spacing accent: 1/16th width -->
@@ -14,7 +14,7 @@
     <div class="flex-1 py-6 px-7 text-stone-700 leading-relaxed prose-body" v-html="renderedBody" />
 
   </div>
-</div>
+</LoadComponent>
 </template>
 
 <script>

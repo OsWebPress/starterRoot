@@ -1,4 +1,4 @@
-# Meet the crew
+# Meet the `crew`
 
 <MagicGrid>
 ![Pascal](/api/images/pascal.jpeg)(

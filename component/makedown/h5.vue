@@ -1,7 +1,7 @@
 <template>
-  <h1 class="text-4xl md:text-5xl font-bold tracking-tight leading-tight text-cyan-200">
+  <h5 class="text-lg md:text-xl font-bold tracking-tight leading-tight text-cyan-200">
     <LoadComponent _component="makedown/richText" :body="body" />
-  </h1>
+  </h5>
 </template>
 
 <script setup>

@@ -1,11 +1,11 @@
 <template>
-  <LoadComponent _component="FullBleed"><div class="bg-orange-100 box-border p-2">
+  <LoadComponent _component="FullBleed"><div class="bg-amber-100 box-border p-2">
     <div
       v-if="loading"
       class="flex items-center justify-center"
       style="min-height: 400px"
     >
-      <span class="text-orange-400 text-sm animate-pulse">Loading images…</span>
+      <span class="text-amber-400 text-sm animate-pulse">Loading images…</span>
     </div>
 
     <div

@@ -1,12 +1,12 @@
 <template>
-  <LoadComponent _component="FullBleed"><div class="bg-orange-100 box-border p-2">
+  <LoadComponent _component="FullBleed"><div class="bg-amber-100 box-border p-2">
     <div class="grid gap-2 w-full h-full grid-cols-1 lg:grid-cols-3">
       <div
         v-for="(image, index) in images"
         :key="index"
         class="relative overflow-hidden rounded-lg shadow-lg bg-white max-h-[60vh]"
         :style="{ minHeight: (imageHeights[index] || 200) + 'px' }"
-        :class="image.text && !flipped[index] ? 'cursor-pointer hover:ring-4 hover:ring-orange-400 hover:animate-pulse' : image.text ? 'cursor-pointer' : ''"
+        :class="image.text && !flipped[index] ? 'cursor-pointer hover:ring-2 hover:ring-amber-400 hover:shadow-md transition-all duration-200' : image.text ? 'cursor-pointer' : ''"
         @click="image.text ? (flipped[index] = !flipped[index]) : null"
       >
         <img

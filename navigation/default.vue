@@ -11,84 +11,94 @@ const props = defineProps({
   },
 });
 const navigation = ref(props.navigationData);
+const mobileOpen = ref(false);
 </script>
+
 <template>
-  <nav class="mx-0 px-5 py-[15px]">
-    <ul class="list-none p-0 m-0 flex">
-      <li
-        v-for="item in navigation"
-        :key="item.url"
-        class="mr-5 last:mr-0 relative group"
-      >
-        <router-link
-          v-if="item.url"
-          :to="item.url"
-          :class="[
-            'no-underline flex items-center',
-            item.url === props.path && !item.image ? 'text-cyan-300 underline' : 'text-[#333]'
-          ]"
+  <nav class="bg-amber-100 border-b-2 border-amber-300">
+    <div class="pl-3rem md:pl-6rem xl:pl-12rem 2xl:pl-18rem pr-8 max-w-4xl 2xl:max-w-6xl h-14 flex items-center justify-between">
+
+      <!-- Logo -->
+      <router-link to="/" class="no-underline flex items-center" aria-label="indented.dev home">
+        <svg viewBox="0 0 48 24" width="48" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="8" y="2" width="22" height="6" rx="2" fill="#3b82f6"/>
+          <rect x="16" y="16" width="22" height="6" rx="2" fill="#3b82f6"/>
+        </svg>
+      </router-link>
+
+      <!-- Desktop links -->
+      <ul class="hidden md:flex items-center gap-6 list-none m-0 p-0">
+        <li
+          v-for="item in navigation"
+          :key="item.url"
+          class="relative group"
         >
-          <img v-if="item.image" :src="item.image" :alt="item.text" :class="['h-18 mr-2', item.url === props.path ? 'border-b-2 border-cyan-300' : 'mb-2']" />
-          <span v-else>{{ item.text }}</span>
-          <span v-if="item.submenu" class="ml-[5px]">▼</span>
-        </router-link>
-        <span
-          v-else
-          :class="[
-            'flex items-center',
-            item.url === props.path && !item.image ? 'text-cyan-300 underline' : 'text-[#333]'
-          ]"
-        >
-          <img v-if="item.image" :src="item.image" :alt="item.text" :class="['h-6 mr-2 rounded-md', item.url === props.path ? 'border-2 border-cyan-300' : '']" />
-          <span v-else>{{ item.text }}</span>
-          <span v-if="item.submenu" class="ml-[5px]">▼</span>
-        </span>
-        <!-- Level 1 submenu -->
-        <ul
-          v-if="item.submenu"
-          class="list-none p-0 m-0 absolute top-full left-0 bg-white border border-[#ccc] shadow-[2px_2px_5px_rgba(0,0,0,0.1)] z-10 hidden group-hover:block"
-        >
-          <li
-            v-for="subItem in item.submenu"
-            :key="subItem.url"
-            class="m-0 relative group/sub"
+          <router-link
+            v-if="item.url"
+            :to="item.url"
+            :class="[
+              'text-sm font-medium no-underline transition-colors',
+              item.url === props.path
+                ? 'text-amber-600 border-b-2 border-amber-500 pb-0.5'
+                : 'text-stone-700 hover:text-amber-600'
+            ]"
           >
-            <router-link
-              :to="subItem.url"
-              :class="[
-                'block px-[15px] py-[10px] whitespace-nowrap no-underline hover:bg-[#eee] flex items-center',
-                subItem.url === props.path && !subItem.image ? 'text-red-500 underline' : 'text-[#333]'
-              ]"
-            >
-              <img v-if="subItem.image" :src="subItem.image" :alt="subItem.text" :class="['h-6 mr-2 rounded-md', subItem.url === props.path ? 'border-2 border-red-500' : '']" />
-              <span v-else>{{ subItem.text }}</span>
-              <span v-if="subItem.submenu" class="float-right ml-auto">▶</span>
-            </router-link>
-            <!-- Level 2 submenu -->
-            <ul
-              v-if="subItem.submenu"
-              class="list-none p-0 m-0 absolute left-full top-0 bg-white border border-[#ccc] shadow-[2px_2px_5px_rgba(0,0,0,0.1)] z-10 hidden group-hover/sub:block"
-            >
-              <li
-                v-for="nestedSubItem in subItem.submenu"
-                :key="nestedSubItem.url"
-                class="m-0"
+            {{ item.text }}
+          </router-link>
+
+          <!-- Dropdown submenu -->
+          <ul
+            v-if="item.submenu"
+            class="absolute top-full left-0 mt-1 bg-amber-50 border border-amber-200 shadow-md rounded-lg list-none p-1 min-w-max hidden group-hover:block z-10"
+          >
+            <li v-for="subItem in item.submenu" :key="subItem.url">
+              <router-link
+                :to="subItem.url"
+                :class="[
+                  'block px-4 py-2 text-sm rounded no-underline transition-colors',
+                  subItem.url === props.path
+                    ? 'text-amber-600'
+                    : 'text-stone-700 hover:text-amber-600 hover:bg-amber-100'
+                ]"
               >
-                <router-link
-                  :to="nestedSubItem.url"
-                  :class="[
-                    'block px-[15px] py-[10px] whitespace-nowrap no-underline hover:bg-[#eee] flex items-center',
-                    nestedSubItem.url === props.path && !nestedSubItem.image ? 'text-red-500 underline' : 'text-[#333]'
-                  ]"
-                >
-                  <img v-if="nestedSubItem.image" :src="nestedSubItem.image" :alt="nestedSubItem.text" :class="['h-6 mr-2 rounded-md', nestedSubItem.url === props.path ? 'border-2 border-red-500' : '']" />
-                  <span v-else>{{ nestedSubItem.text }}</span>
-                </router-link>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
+                {{ subItem.text }}
+              </router-link>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Hamburger button -->
+      <button
+        class="md:hidden flex flex-col justify-center gap-1.5 w-8 h-8 p-1 text-stone-700 cursor-pointer bg-transparent border-0"
+        @click="mobileOpen = !mobileOpen"
+        aria-label="Toggle menu"
+      >
+        <span class="block w-full h-0.5 bg-stone-700 transition-all duration-200 origin-center" :class="mobileOpen ? 'rotate-45 translate-y-2' : ''" />
+        <span class="block w-full h-0.5 bg-stone-700 transition-all duration-200" :class="mobileOpen ? 'opacity-0' : ''" />
+        <span class="block w-full h-0.5 bg-stone-700 transition-all duration-200 origin-center" :class="mobileOpen ? '-rotate-45 -translate-y-2' : ''" />
+      </button>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div v-if="mobileOpen" class="md:hidden border-t border-amber-200">
+      <ul class="pl-3rem md:pl-6rem list-none m-0 p-0">
+        <li v-for="item in navigation" :key="item.url">
+          <router-link
+            v-if="item.url"
+            :to="item.url"
+            :class="[
+              'block py-3 px-6 text-sm font-medium no-underline transition-colors',
+              item.url === props.path
+                ? 'text-amber-600 border-l-2 border-amber-500 bg-amber-50'
+                : 'text-stone-700 hover:text-amber-600 hover:bg-amber-50'
+            ]"
+            @click="mobileOpen = false"
+          >
+            {{ item.text }}
+          </router-link>
+        </li>
+      </ul>
+    </div>
   </nav>
 </template>

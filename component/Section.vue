@@ -1,6 +1,6 @@
 <template>
   <LoadComponent _component="FullBleed">
-    <div class="relative min-h-screen">
+    <div :class="small === 'true' ? 'relative' : 'relative min-h-screen'">
 
       <div
         v-if="bg"
@@ -9,7 +9,7 @@
         :style="bgStyle"
       />
 
-      <div class="relative z-10 pl-3rem md:pl-6rem xl:pl-12rem 2xl:pl-18rem pr-8 max-w-4xl 2xl:max-w-6xl">
+      <div class="relative z-10 pl-3rem md:pl-6rem xl:pl-12rem 2xl:pl-18rem pr-8 max-w-4xl 2xl:max-w-6xl pt-12 pb-24">
         <Makedown :content="body" />
       </div>
 
@@ -33,6 +33,10 @@ export default {
     body: {
       type: String,
       default: '',
+    },
+    small: {
+      type: String,
+      default: 'false',
     },
   },
 

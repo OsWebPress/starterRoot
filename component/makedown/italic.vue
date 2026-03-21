@@ -1,5 +1,5 @@
 <template>
-  <em class="italic">{{ body }}<slot /></em>
+  <em class="italic text-stone-600">{{ body }}<slot /></em>
 </template>
 
 <script setup>

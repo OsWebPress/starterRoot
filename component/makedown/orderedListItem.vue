@@ -1,16 +1,11 @@
 <template>
-  <li class="text-gray-700 py-1 ml-5 list-decimal">
-    <slot />
+  <li class="text-stone-700 py-1 ml-6 list-decimal marker:text-amber-700">
+    <LoadComponent _component="makedown/richText" :body="body" />
   </li>
 </template>
 
 <script setup>
-const props = defineProps({
-  number: {
-    type: Number,
-    required: false,
-    default: 1
-  }
-})
-console.log("OrderedListItem number:", props.number);
+defineProps({
+  body: { type: String, default: '' }
+});
 </script>

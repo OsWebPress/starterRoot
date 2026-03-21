@@ -6,7 +6,7 @@
 
     <div v-else-if="posts.length === 0" class="text-sm text-stone-400 py-8">No posts found.</div>
 
-    <div v-else class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div v-else class="flex flex-col gap-4">
       <LoadComponent
         v-for="post in posts"
         :key="post.href"
@@ -49,7 +49,7 @@ function parsePost(content, filename) {
   const dateMatch = filename.match(/^(\d{4}-\d{2}-\d{2})/)
   const date = dateMatch ? dateMatch[1] : ''
 
-  const excerpt = lines.find(l => l.trim() && !l.startsWith('#') && !l.startsWith('---')) || ''
+  const excerpt = lines.find(l => l.trim() && !l.startsWith('#') && !l.startsWith('---') && !l.startsWith('<') && !l.startsWith('>')) || ''
 
   const basePath = props.slug.replace(/^carbon\//, '')
   const href = `/${basePath}/${filename.replace(/\.md$/, '')}`

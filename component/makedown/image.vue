@@ -2,7 +2,7 @@
 <div><img
     :src="url"
     :alt="alt"
-    class="max-w-full h-auto max-h-[50vh] rounded-lg"
+    class="max-w-full h-auto max-h-[50vh] rounded-lg shadow-sm my-4"
 	loading="lazy"
 /></div>
 </template>

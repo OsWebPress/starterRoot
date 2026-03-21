@@ -1,6 +1,6 @@
 <template>
 <LoadComponent _component="FullBleed">
-  <div class="flex items-start bg-stone-50 border border-stone-200 overflow-hidden shadow-sm min-h-[220px]">
+  <div class="flex items-start bg-stone-50 border border-stone-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow rounded-xl min-h-[220px]">
 
     <!-- Left spacing accent: 1/16th width -->
     <div class="w-[6.25%] self-stretch bg-gradient-to-b from-amber-300 to-amber-600 shrink-0 min-w-[12px]" />

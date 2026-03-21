@@ -1,7 +1,7 @@
 <template>
   <a
     :href="url"
-    class="text-blue-600 hover:text-blue-800 underline hover:no-underline transition-colors"
+    class="text-amber-500 underline underline-offset-2 hover:text-amber-700 transition-colors"
     target="_blank"
     rel="noopener noreferrer"
   >

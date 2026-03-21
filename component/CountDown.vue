@@ -46,29 +46,29 @@ const pad = (n) => String(n).padStart(2, '0');
 </script>
 <template>
   <div class="flex flex-col items-center gap-3">
-    <p v-if="label" class="text-sm uppercase tracking-widest text-cyan-200">{{ label }}</p>
-    <div v-if="timeLeft.expired" class="text-2xl font-bold text-red-500">
+    <p v-if="label" class="text-sm uppercase tracking-widest text-stone-400">{{ label }}</p>
+    <div v-if="timeLeft.expired" class="text-2xl font-bold text-amber-600">
       Date has passed!
     </div>
     <div v-else class="flex items-center gap-4">
       <div class="flex flex-col items-center">
-        <span class="text-4xl font-bold tabular-nums text-[#333]">{{ timeLeft.days }}</span>
-        <span class="text-xs uppercase tracking-widest text-[#999] mt-1">Days</span>
+        <span class="text-4xl font-bold tabular-nums text-sky-600">{{ timeLeft.days }}</span>
+        <span class="text-xs uppercase tracking-widest text-stone-400 mt-1">Days</span>
       </div>
-      <span class="text-3xl font-bold text-[#ccc] mb-4">:</span>
+      <span class="text-3xl font-bold text-stone-300 mb-4">:</span>
       <div class="flex flex-col items-center">
-        <span class="text-4xl font-bold tabular-nums text-[#333]">{{ pad(timeLeft.hours) }}</span>
-        <span class="text-xs uppercase tracking-widest text-[#999] mt-1">Hours</span>
+        <span class="text-4xl font-bold tabular-nums text-sky-600">{{ pad(timeLeft.hours) }}</span>
+        <span class="text-xs uppercase tracking-widest text-stone-400 mt-1">Hours</span>
       </div>
-      <span class="text-3xl font-bold text-[#ccc] mb-4">:</span>
+      <span class="text-3xl font-bold text-stone-300 mb-4">:</span>
       <div class="flex flex-col items-center">
-        <span class="text-4xl font-bold tabular-nums text-[#333]">{{ pad(timeLeft.minutes) }}</span>
-        <span class="text-xs uppercase tracking-widest text-[#999] mt-1">Minutes</span>
+        <span class="text-4xl font-bold tabular-nums text-sky-600">{{ pad(timeLeft.minutes) }}</span>
+        <span class="text-xs uppercase tracking-widest text-stone-400 mt-1">Minutes</span>
       </div>
-      <span class="text-3xl font-bold text-[#ccc] mb-4">:</span>
+      <span class="text-3xl font-bold text-stone-300 mb-4">:</span>
       <div class="flex flex-col items-center">
-        <span class="text-4xl font-bold tabular-nums text-[#333]">{{ pad(timeLeft.seconds) }}</span>
-        <span class="text-xs uppercase tracking-widest text-[#999] mt-1">Seconds</span>
+        <span class="text-4xl font-bold tabular-nums text-sky-600">{{ pad(timeLeft.seconds) }}</span>
+        <span class="text-xs uppercase tracking-widest text-stone-400 mt-1">Seconds</span>
       </div>
     </div>
   </div>

@@ -1,31 +1,18 @@
 [
-	{
-	  "text": "home",
-	  "url": "/",
-	  "image": "/api/images/farra-logo.png"
-	},
-	{
-		"text": "Our Story",
-		"url": "/our-story"
-	},
-	{
-	  "text": "SV Farra",
-	  "url": "/farra"
-	},
-	{
-		"text": "Blog",
-		"url": "/blog"
-	},
-	{
-		"text": "Crew",
-		"url": "/crew"
-	},
-	{
-	  "text": "Find us!",
-	  "url": "/socials"
-	},
-    {
-      "text": "Photography",
-      "url": "/photography"
-    }
+  {
+    "text": "home",
+    "url": "/"
+  },
+  {
+    "text": "blog",
+    "url": "/blog"
+  },
+  {
+    "text": "sailing",
+    "url": "/sailing"
+  },
+  {
+    "text": "builder",
+    "url": "/builder"
+  }
 ]

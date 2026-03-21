@@ -4,9 +4,9 @@
       type="checkbox"
       :checked="checked"
       @change="$emit('update:checked', $event.target.checked)"
-      class="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-2 focus:ring-blue-500 cursor-pointer"
+      class="w-4 h-4 rounded-sm border-2 border-stone-400 accent-amber-500 cursor-pointer"
     />
-    <label class="text-gray-700 cursor-pointer" @click="toggleCheck">
+    <label class="text-stone-700 cursor-pointer" @click="toggleCheck">
       <slot />
     </label>
   </div>

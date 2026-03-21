@@ -1,6 +1,6 @@
 <template>
-  <h6 class="text-base md:text-lg font-bold tracking-tight leading-tight text-cyan-200">
-    <LoadComponent _component="makedown/richText" :body="body" />
+  <h6 class="font-['Josefin_Sans'] text-base font-medium text-stone-500 mt-3 mb-1">
+    <span class="text-amber-500 select-none"># </span><LoadComponent _component="makedown/richText" :body="body" />
   </h6>
 </template>
 

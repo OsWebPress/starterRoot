@@ -1,5 +1,5 @@
 <template>
-  <strong class="font-bold">{{ body }}<slot /></strong>
+  <strong class="font-semibold text-stone-800">{{ body }}<slot /></strong>
 </template>
 
 <script setup>

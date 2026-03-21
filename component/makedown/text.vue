@@ -1,5 +1,5 @@
 <template>
-  <span class="text-blue-400 whitespace-pre-wrap overflow-x-auto">
+  <span class="text-stone-700 leading-relaxed whitespace-pre-wrap">
     <LoadComponent _component="makedown/richText" :body="body" />
   </span>
 </template>

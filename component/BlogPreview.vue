@@ -1,12 +1,12 @@
 <template>
-  <a :href="href" class="block group border border-amber-200 bg-amber-100 hover:bg-amber-50 hover:shadow-md transition-all duration-200 p-6 rounded-xl">
+  <router-link :to="href" class="block group border border-amber-200 bg-amber-100 hover:bg-amber-50 hover:shadow-md transition-all duration-200 p-6 rounded-xl">
     <div class="flex items-center gap-3 mb-3">
       <span v-if="date" class="text-xs font-mono text-amber-900 bg-amber-200 px-2 py-0.5 rounded">{{ date }}</span>
     </div>
     <h2 class="text-lg font-semibold text-stone-800 group-hover:text-amber-700 transition-colors mb-2 leading-snug">{{ title }}</h2>
     <p class="text-sm text-stone-600 leading-relaxed line-clamp-3 mb-4">{{ excerpt }}</p>
     <span class="text-xs font-medium text-amber-800 group-hover:text-amber-900 transition-colors">Read on →</span>
-  </a>
+  </router-link>
 </template>
 
 <script setup>

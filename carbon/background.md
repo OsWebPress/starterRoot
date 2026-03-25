@@ -1,1 +1,1 @@
-<Section bg="sky-100"></Section>
+<Section bg="sky-100" large="true"></Section>

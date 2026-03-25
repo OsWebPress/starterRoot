@@ -24,7 +24,7 @@ If the file is not found the renderer falls back to `carbon/404.md`.
 
 Create a `.md` file in `root/carbon/` at the path that matches the URL you want. That is all. No routing config, no rebuild.
 
-```
+```bash
 carbon/about.md          →  /about
 carbon/blog/my-post.md   →  /blog/my-post
 carbon/.md               →  /
@@ -68,7 +68,7 @@ This means new components are available immediately after the file is saved — 
 
 Navigation is defined in `root/navigation/navigation.json` as an array of link objects. The default nav component reads this file and renders the navigation bar. To add or change nav items, edit this file directly.
 
-```
+```json
 [
   { "text": "home", "url": "/" },
   { "text": "blog", "url": "/blog" }

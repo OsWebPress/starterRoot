@@ -1,6 +1,6 @@
 <template>
   <LoadComponent _component="FullBleed">
-    <div :class="small === 'true' ? 'relative' : 'relative min-h-screen'">
+    <div :class="large === 'true' ? 'relative min-h-screen' : 'relative'">
 
       <div
         v-if="bg"
@@ -34,7 +34,7 @@ export default {
       type: String,
       default: '',
     },
-    small: {
+    large: {
       type: String,
       default: 'false',
     },

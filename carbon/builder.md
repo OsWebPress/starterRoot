@@ -7,7 +7,7 @@ OsPress is a self-hosted website builder I put together for small sites, my own 
 <LinkButton href="/builder/docs">Read the docs →</LinkButton>
 
 
-<Section bg="amber-100" small="true">
+<Section bg="amber-100">
 
 ## How it works
 

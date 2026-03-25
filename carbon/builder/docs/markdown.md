@@ -8,7 +8,7 @@ OsPress uses **makedown**, a custom Markdown parser. Most standard Markdown synt
 
 ## Headings
 
-```
+```md
 # Heading 1
 ## Heading 2
 ### Heading 3
@@ -40,7 +40,7 @@ Any line that does not match another token is rendered as a text paragraph. Inli
 
 ## Images
 
-```
+```md
 ![alt text](/api/images/photo.jpg)
 ```
 
@@ -48,7 +48,7 @@ Renders an inline image with rounded corners and a subtle shadow. Images are ser
 
 **Full-bleed background image:**
 
-```
+```md
 !![alt text](/api/images/photo.jpg)
 ```
 
@@ -58,7 +58,7 @@ Double exclamation mark renders the image as a fixed fullscreen background layer
 
 ## Blockquote
 
-```
+```md
 > This is a blockquote.
 ```
 
@@ -68,13 +68,13 @@ Rendered with an amber left border and a warm tinted background.
 
 ## Horizontal rule
 
-```
+```md
 ---
 ```
 
 or
 
-```
+```md
 ***
 ```
 
@@ -85,7 +85,7 @@ Renders a thin amber divider with vertical spacing.
 ## Lists
 
 **Unordered:**
-```
+```md
 - First item
 - Second item
 * Also works
@@ -93,7 +93,7 @@ Renders a thin amber divider with vertical spacing.
 ```
 
 **Ordered:**
-```
+```md
 1. First item
 2. Second item
 ```
@@ -102,7 +102,7 @@ Renders a thin amber divider with vertical spacing.
 
 ## Checkboxes
 
-```
+```md
 [x] Done
 [ ] Not done
 ```
@@ -113,15 +113,13 @@ Renders a styled checkbox. The checked state is interactive in the browser.
 
 ## Code block
 
-Fenced with triple backticks:
+Fenced with triple backticks, with an optional language hint on the opening line:
 
-````
-```
+```js
 your code here
 ```
-````
 
-Renders with a dark background and monospace font. Use for code samples or config snippets.
+Renders with syntax highlighting and monospace font. Use for code samples or config snippets.
 
 </Section>
 
@@ -130,12 +128,12 @@ Renders with a dark background and monospace font. Use for code samples or confi
 Any PascalCase tag is resolved as a remote component from `root/component/`. Two forms are supported:
 
 **Self-closing:**
-```
+```html
 <MyComponent prop="value" />
 ```
 
 **Block — inner content passed as slot:**
-```
+```html
 <MyComponent prop="value">
 Content rendered inside the component.
 </MyComponent>
@@ -147,7 +145,7 @@ Components can be nested. See the [components doc](/builder/docs/components) for
 
 ## Comments
 
-```
+```html
 <!-- this will not render -->
 ```
 

@@ -4,13 +4,13 @@
 
 Remote components are `.vue` files stored in `root/component/`. The client fetches them at runtime from `/api/component/Name.vue` and caches them for the session. Once a file exists in that folder it is immediately available as a tag in any Markdown page — no build step, no registration.
 
-<Section bg="amber-100" small="true">
+<Section bg="amber-100">
 
 ## File structure
 
 A component is a standard Vue 3 single-file component. The minimal shape looks like this:
 
-```
+```vue
 <template>
   <div>
     <!-- your markup here -->
@@ -34,19 +34,19 @@ Components can be used in two forms:
 
 **Self-closing** - for components that do not wrap content:
 
-```
+```html
 <MyCard title="Hello" image="/api/images/photo.jpg" />
 ```
 
 **Block** - for components that wrap Markdown content. The inner content is passed as a slot:
 
-```
+```html
 <MyCard title="Hello">
 This is the **slot content**, rendered as Markdown inside the component.
 </MyCard>
 ```
 
-<Section bg="amber-100" small="true">
+<Section bg="amber-100">
 
 ## Props
 
@@ -70,7 +70,7 @@ All Tailwind utility classes are available via UnoCSS runtime. Use them directly
 
 Inside a remote component you can load other components using `LoadComponent`:
 
-```
+```html
 <LoadComponent _component="FullBleed">
   <div>full width content</div>
 </LoadComponent>
@@ -78,7 +78,7 @@ Inside a remote component you can load other components using `LoadComponent`:
 
 This is the same mechanism the page renderer uses. You can nest remote components inside remote components, including other content components or makedown token components.
 
-<Section bg="amber-100" small="true">
+<Section bg="amber-100">
 
 ## Makedown token components
 
